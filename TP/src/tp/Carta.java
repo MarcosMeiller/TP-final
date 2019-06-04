@@ -1,15 +1,15 @@
 package tp;
 
-public class Carta 
+public class Carta implements IRecibirDaño
 {
-    String nombre;
-    String tipo;
-    int ID;
-    int mana;
-    int vida;
-    int daño;
-    boolean seMovio;
-    boolean yaAtaco;
+    private String nombre;
+    private String tipo;
+    private int ID;
+    private int mana;
+    private int vida;
+    private int daño;
+    private boolean seMovio;
+    private boolean yaAtaco;
 
     public Carta(String nombre, String tipo, int ID, int mana, int vida, int daño, boolean seMovio, boolean yaAtaco) {
         this.nombre = nombre;
@@ -70,5 +70,10 @@ public class Carta
         
                 
     }
+
+    @Override
+    public void recibirDaño(int dañoRecibido) {
+         vida-=dañoRecibido;
+   }
     
 }

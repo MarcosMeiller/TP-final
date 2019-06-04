@@ -5,10 +5,7 @@
  */
 package tp;
 
-/**
- *
- * @author usuario
- */
+
 public class Hechizo extends Carta {
     
 }

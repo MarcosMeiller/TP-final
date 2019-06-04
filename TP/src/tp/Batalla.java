@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Batalla 
 {
-    ArrayList <Carta> cartasEnBatalla;
+    private ArrayList <Carta> cartasEnBatalla;
 
     public Batalla(ArrayList<Carta> cartasEnBatalla) {
         this.cartasEnBatalla = new ArrayList();

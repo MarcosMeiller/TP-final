@@ -7,9 +7,6 @@ public class Main {
         Carta cartita1 = new Carta("Guerrero","Tanque",3,4,6,3,false,false);
         Carta cartita2 = new Carta("Mago","Daño",4,5,3,6,false,false);
         System.out.println(cartita+"\n"+cartita1+"\n"+cartita2);
-        //Barbaro, Guerrero, Arquero, Brujo, Asesino, Conjurador, Caballero, Druida, No-Muerto, Dragon, Mago, Cazador, Goblin
-        //carta de mana, de bola de fuego, de robo, de buff (vida o daño)
-        //Prueba de modificacion de linea, Version 0.1
-        
+
     }
 }

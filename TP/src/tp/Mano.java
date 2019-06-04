@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Mano 
 {
-    ArrayList<Carta> cartasEnMano;
+    private ArrayList<Carta> cartasEnMano;
 
     public Mano(ArrayList<Carta> cartasEnMano) {
         this.cartasEnMano =new ArrayList();

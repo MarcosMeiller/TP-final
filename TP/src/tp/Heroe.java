@@ -1,20 +1,21 @@
 package tp;
 
-public class Heroe
+public class Heroe 
+        implements IRecibirDaño
 {
-    int vidaActual;
-    int vidaMaxima;
-    int manaActual;
-    int manaMaximo;
-    int contadorTurno;
-    int recibirDaño;
-    int elegir;
-    int costoHabilidad;
-    int dañoHabilidad;
-    String nombre;
-    Mano miMano;
-    Mazo miMazo;
-    Batalla misCartasBatallando;
+    private int vidaActual;
+    private int vidaMaxima;
+    private int manaActual;
+    private int manaMaximo;
+    private int contadorTurno;
+    private int recibirDaño;
+    private int elegir;
+    private int costoHabilidad;
+    private int dañoHabilidad;
+    private String nombre;
+    private Mano miMano;
+    private Mazo miMazo;
+    private Batalla misCartasBatallando;
 
     public Heroe() 
     {
@@ -37,12 +38,13 @@ public class Heroe
         this.miMazo = miMazo;
         this.misCartasBatallando = misCartasBatallando;
     }
-
+    
     public int getVidaActual() 
     {
         return vidaActual;
     }
-
+    
+  
     public int getVidaMaxima() 
     {
         return vidaMaxima;
@@ -141,6 +143,11 @@ public class Heroe
     public void setMisCartasBatallando(Batalla misCartasBatallando) 
     {
         this.misCartasBatallando = misCartasBatallando;
+    }
+
+   @Override
+    public void recibirDaño(int dañoRecibido) {
+       
     }
     
 }
