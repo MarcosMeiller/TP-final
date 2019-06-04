@@ -6,7 +6,8 @@ public class Mano
 {
     ArrayList<Carta> cartasEnMano;
 
-    public Mano(ArrayList<Carta> cartasEnMano) {
+    public Mano(ArrayList<Carta> cartasEnMano) 
+    {
         this.cartasEnMano =new ArrayList();
     }
     
@@ -18,6 +19,5 @@ public class Mano
     public void sacarDeMano (int posicion)
     {
         cartasEnMano.remove(posicion);
-    }
-    
+    }  
 }

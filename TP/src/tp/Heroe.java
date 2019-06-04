@@ -141,6 +141,5 @@ public class Heroe
     public void setMisCartasBatallando(Batalla misCartasBatallando) 
     {
         this.misCartasBatallando = misCartasBatallando;
-    }
-    
+    }  
 }
