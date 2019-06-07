@@ -1,5 +1,7 @@
 package tp;
 
+import java.util.ArrayList;
+
 public class Heroe 
         implements IRecibirDaño
 {
@@ -8,35 +10,28 @@ public class Heroe
     private int manaActual;
     private int manaMaximo;
     private int contadorTurno;
-    private int recibirDaño;
     private int elegir;
-    private int costoHabilidad;
-    private int dañoHabilidad;
     private String nombre;
-    private Mano miMano;
-    private Mazo miMazo;
-    private Batalla misCartasBatallando;
+    private ArrayList<Carta> miMano;
+    private ArrayList<Carta> cartasEnMazo;
 
-    public Heroe() 
+    public Heroe()
     {
         
     }
 
-    public Heroe(int vidaActual, int vidaMaxima, int manaActual, int manaMaximo, int contadorTurno, int recibirDaño, int elegir, int costoHabilidad, int dañoHabilidad, String nombre, Mano miMano, Mazo miMazo, Batalla misCartasBatallando) 
+    public Heroe(int vidaActual, int vidaMaxima, int manaActual, int manaMaximo, int contadorTurno, int elegir, String nombre) 
     {
         this.vidaActual = vidaActual;
         this.vidaMaxima = vidaMaxima;
         this.manaActual = manaActual;
         this.manaMaximo = manaMaximo;
         this.contadorTurno = contadorTurno;
-        this.recibirDaño = recibirDaño;
         this.elegir = elegir;
-        this.costoHabilidad = costoHabilidad;
-        this.dañoHabilidad = dañoHabilidad;
         this.nombre = nombre;
-        this.miMano = miMano;
-        this.miMazo = miMazo;
-        this.misCartasBatallando = misCartasBatallando;
+        this.miMano= new ArrayList();
+        this.cartasEnMazo=new ArrayList();
+        
     }
     
     public int getVidaActual() 
@@ -65,45 +60,22 @@ public class Heroe
         return contadorTurno;
     }
 
-    public int getRecibirDaño() 
-    {
-        return recibirDaño;
-    }
+ 
 
     public int getElegir() 
     {
         return elegir;
     }
-
-    public int getCostoHabilidad() 
-    {
-        return costoHabilidad;
-    }
-
-    public int getDañoHabilidad() 
-    {
-        return dañoHabilidad;
-    }
-
+    
     public String getNombre() 
     {
         return nombre;
     }
-
-    public Mano getMiMano() 
-    {
+    public ArrayList<Carta> getMiMano() {
         return miMano;
     }
 
-    public Mazo getMiMazo() 
-    {
-        return miMazo;
-    }
-
-    public Batalla getMisCartasBatallando() 
-    {
-        return misCartasBatallando;
-    }
+    
 
     public void setVidaActual(int vidaActual) 
     {
@@ -120,34 +92,55 @@ public class Heroe
         this.contadorTurno = contadorTurno;
     }
 
-    public void setRecibirDaño(int recibirDaño) 
-    {
-        this.recibirDaño = recibirDaño;
-    }
-
     public void setElegir(int elegir) 
     {
         this.elegir = elegir;
     }
 
-    public void setMiMano(Mano miMano) 
-    {
-        this.miMano = miMano;
-    }
-
-    public void setMiMazo(Mazo miMazo) 
-    {
-        this.miMazo = miMazo;
-    }
-
-    public void setMisCartasBatallando(Batalla misCartasBatallando) 
-    {
-        this.misCartasBatallando = misCartasBatallando;
-    }
+    
 
    @Override
-    public void recibirDaño(int dañoRecibido) {
-       
+    public void recibirDaño(int dañoRecibido) 
+    {
+       vidaActual-=dañoRecibido;
     }
     
-}
+    public void agregarAMano(Carta a)
+    {
+        miMano.add(a);
+    }
+    
+    public void removerDeMano(Carta a)
+    {
+        miMano.remove(a);
+    }
+    
+    public ArrayList<Carta> getCartasEnMazo() 
+    {
+        return cartasEnMazo;
+    }
+
+    public void setCartasEnMazo(ArrayList<Carta> cartasEnMazo) 
+    {
+        this.cartasEnMazo = cartasEnMazo;
+    }
+    
+    public void removerCartaDelMazo(Carta carta)
+    {
+        cartasEnMazo.remove(carta);
+    }
+    
+    public Carta robarCartaDeMazo()
+    {
+        Carta a=cartasEnMazo.get(0);
+        cartasEnMazo.remove(0);
+        return a;
+    }
+
+    @Override
+    public String toString() {
+        return "Heroe{" + "vidaActual=" + vidaActual + '}';
+    }
+
+    }  
+

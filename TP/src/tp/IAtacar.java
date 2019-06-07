@@ -1,6 +1,7 @@
 package tp;
 
 
-public interface IAtacar {
-    
+public interface IAtacar 
+{
+    int atacar();
 }

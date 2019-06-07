@@ -1,11 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tp;
 
 
-public class Hechizo extends Carta {
+public class Hechizo extends Carta 
+{
+  
+    private String tipo;
     
+    public void usarHechizo()
+    {
+        if(tipo=="robar carta")
+        {
+            
+        }
+        if(tipo=="daño en area")
+        {
+            
+        }
+    }   
 }

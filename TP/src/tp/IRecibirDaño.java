@@ -2,6 +2,7 @@
 package tp;
 
 
-public interface IRecibirDaño {
+public interface IRecibirDaño 
+{
     void recibirDaño (int dañoRecibido);
 }

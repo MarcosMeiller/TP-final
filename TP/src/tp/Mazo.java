@@ -6,7 +6,8 @@ public class Mazo
 {
     private ArrayList<Carta> cartasEnMazo ;
 
-    public Mazo(ArrayList<Carta> cartasEnMazo) {
+    public Mazo(ArrayList<Carta> cartasEnMazo) 
+    {
         this.cartasEnMazo =new ArrayList();
     }
 
